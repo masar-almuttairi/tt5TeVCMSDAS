@@ -1,0 +1,130 @@
+tree: "Events"
+eras:
+  '2017':
+    luminosity: 308.540 #pb
+samples:
+  HighEGJet_2017G:
+    group: data
+    era: "2017"
+    files: filelists/2l/HighEGJet.dat
+    run_range: [306464, 306826]
+    certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
+  DoubleMuon_2017G:
+    group: data
+    era: "2017"
+    files: filelists/2l/DoubleMuon.dat
+    run_range: [306464, 306826]
+    certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
+  # TODO SingleMuon ???
+  WJetsToLNu:
+    group: "fake"
+    cross-section: 21159.
+    era: "2017"
+    files: filelists/2l/WJetsToLNu.dat
+    generated-events: SumWeights
+  DYJetsToLL_M_10to50:
+    cross-section: 1506.
+    group: DY
+    era: "2017"
+    files: filelists/2l/DYJetsToLL_M_10to50.dat
+    generated-events: SumWeights
+  DYJetsToLL_MLL50:
+    cross-section: 2055.
+    group: DY
+    era: "2017"
+    files: filelists/2l/DYJetsToLL_MLL50.dat
+    generated-events: SumWeights
+  TT: ## dileptonic
+    group: TT
+    cross-section: 68.9
+    era: "2017"
+    files: filelists/2l/TT.dat
+    generated-events: SumWeights
+  TT_singlelepton:
+    cross-section: 68.9 ## ??
+    group: fake
+    era: "2017"
+    files: filelists/2l/TTsemilep.dat
+    generated-events: SumWeights
+  #TT_hdampDOWN
+  #TT_hdampUP
+  #TT_mtop166p5
+  #TT_mtop178p5
+  #TT_TuneCP5down
+  #TT_TuneCP5up
+  tW:
+    group: tW
+    cross-section: 1.629072
+    era: "2017"
+    files: filelists/2l/tW.dat
+    generated-events: SumWeights
+  tbarW:
+    group: tW
+    cross-section: 1.629072
+    era: "2017"
+    files: filelists/2l/tbarW.dat
+    generated-events: SumWeights
+  WWTo2L2Nu:
+    cross-section: 0.1858
+    group: VV
+    era: "2017"
+    files: filelists/2l/WWTo2L2Nu.dat
+    generated-events: SumWeights
+  WZTo3LNU:
+    cross-section: 0.1258
+    group: VV
+    era: "2017"
+    files: filelists/2l/WZTo3LNU.dat
+    generated-events: SumWeights
+  ZZTo2L2Nu:
+    cross-section: 0.2641
+    group: VV
+    era: "2017"
+    files: filelists/2l/ZZTo2L2Nu.dat
+    generated-events: SumWeights
+  ZZTo4L:
+    cross-section: 0.4687
+    group: VV
+    era: "2017"
+    files: filelists/2l/ZZTo4L.dat
+    generated-events: SumWeights
+plotIt:
+  configuration:
+    width: 800
+    height: 600
+    luminosity-label: '%1$.2f fb^{-1} (13 TeV)'
+    experiment: CMS
+    extra-label: CMSDAS@CERN2020
+    show-overflow: true
+  legend:
+    position: [0.7, 0.6, 0.91, 0.91]
+  groups:
+    data:
+      legend: data
+    fake:
+      fill-color: "#6A4A3C" # brown
+      legend: fake
+      order: 4
+    DY:
+      fill-color: "#EDC951" # yellow
+      legend: DY
+      order: 5
+    TT:
+      fill-color: "#CC333F" # red
+      legend: TT
+      order: 3
+    tW:
+      fill-color: "#ED5188" # orange
+      legend: tW
+      order: 2
+    VV:
+      fill-color: "#88D0E0"
+      legend: VV
+      order: 1
+  plotdefaults:
+    y-axis: Events
+    log-y: both
+    y-axis-show-zero: True
+    save-extensions: [pdf]
+    show-ratio: True
+    sort-by-yields: False
