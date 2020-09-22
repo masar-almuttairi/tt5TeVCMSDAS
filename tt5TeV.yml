@@ -22,7 +22,7 @@ samples:
     cross-section: 21159.
     era: "2017"
     files: filelists/WJetsToLNu_TuneCP5_5020GeV_amcatnloFXFX.dat
-    generated-events: SumWeights
+    generated-events: genEventSumw
     split: 3
   DYJetsToLL_M_10to50:
     cross-section: 1506.
