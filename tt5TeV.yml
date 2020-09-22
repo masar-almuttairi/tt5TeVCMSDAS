@@ -6,88 +6,77 @@ samples:
   HighEGJet_2017G:
     group: data
     era: "2017"
-    files: filelists/2l/HighEGJet.dat
+    files: filelists/HighEGJet.dat
     run_range: [306464, 306826]
     certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
-  DoubleMuon_2017G:
+    split: 6
+  SingleMuon_2017G:
     group: data
     era: "2017"
-    files: filelists/2l/DoubleMuon.dat
+    files: filelists/SingleMuon.dat
     run_range: [306464, 306826]
     certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
-  # TODO SingleMuon ???
-  WJetsToLNu:
+    split: 10
+  WJetsToLNu: # alternatively use the jet multiplcity binned sample
     group: "fake"
     cross-section: 21159.
     era: "2017"
-    files: filelists/2l/WJetsToLNu.dat
+    files: filelists/WJetsToLNu_TuneCP5_5020GeV_amcatnloFXFX.dat
     generated-events: SumWeights
   DYJetsToLL_M_10to50:
     cross-section: 1506.
     group: DY
     era: "2017"
-    files: filelists/2l/DYJetsToLL_M_10to50.dat
-    generated-events: SumWeights
-  DYJetsToLL_MLL50:
+    files: filelists/DYJetsToLL_MLL_10to50_TuneCP5_5020GeV_amcatnloFXFX.dat
+    generated-events: genEventSumw
+  DYJetsToLL_MLL50: # alternatively use the jet multiplicity binned sample
     cross-section: 2055.
     group: DY
     era: "2017"
-    files: filelists/2l/DYJetsToLL_MLL50.dat
-    generated-events: SumWeights
-  TT: ## dileptonic
+    files: filelists/DYJetsToLL_MLL_50_TuneCP5_5020GeV_amcatnloFXFX.dat
+    generated-events: genEventSumw
+  TT:
     group: TT
     cross-section: 68.9
     era: "2017"
-    files: filelists/2l/TT.dat
-    generated-events: SumWeights
-  TT_singlelepton:
-    cross-section: 68.9 ## ??
-    group: fake
-    era: "2017"
-    files: filelists/2l/TTsemilep.dat
-    generated-events: SumWeights
-  #TT_hdampDOWN
-  #TT_hdampUP
-  #TT_mtop166p5
-  #TT_mtop178p5
-  #TT_TuneCP5down
-  #TT_TuneCP5up
+    files: filelists/TT_TuneCP5_PSweights_5p02TeV.dat
+    generated-events: genEventSumw
   tW:
     group: tW
     cross-section: 1.629072
     era: "2017"
-    files: filelists/2l/tW.dat
-    generated-events: SumWeights
+    files: filelists/tW_5f_noFullHad_TuneCP5_5p02TeV.dat
+    generated-events: genEventSumw
   tbarW:
     group: tW
     cross-section: 1.629072
     era: "2017"
-    files: filelists/2l/tbarW.dat
-    generated-events: SumWeights
+    files: filelists/tbarW_5f_noFullHad_TuneCP5_5p02TeV.dat
+    generated-events: genEventSumw
   WWTo2L2Nu:
     cross-section: 0.1858
     group: VV
     era: "2017"
-    files: filelists/2l/WWTo2L2Nu.dat
-    generated-events: SumWeights
+    files: filelists/WWTo2L2Nu_NNPDF31_TuneCP5_5p02TeV.dat
+    generated-events: genEventSumw
   WZTo3LNU:
     cross-section: 0.1258
     group: VV
     era: "2017"
-    files: filelists/2l/WZTo3LNU.dat
-    generated-events: SumWeights
+    files: filelists/WZTo3LNU_NNPDF30_TuneCP5_5p20TeV.dat
+    generated-events: genEventSumw
   ZZTo2L2Nu:
     cross-section: 0.2641
     group: VV
     era: "2017"
-    files: filelists/2l/ZZTo2L2Nu.dat
-    generated-events: SumWeights
+    files: filelists/ZZTo2L2Nu_5p02TeV.dat
+    generated-events: genEventSumw
   ZZTo4L:
     cross-section: 0.4687
     group: VV
     era: "2017"
-    files: filelists/2l/ZZTo4L.dat
-    generated-events: SumWeights
+    files: filelists/ZZTo4L_5p02TeV.dat
+    generated-events: genEventSumw
 plotIt:
   configuration:
     width: 800
