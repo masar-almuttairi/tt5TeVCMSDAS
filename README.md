@@ -1,6 +1,6 @@
 Skeleton code for the top quark long exercise at CMSvDAS2020@CERN
 =================================================================
-See the [exercise twiki](https://indico.cern.ch/event/886923/timetable/) for more information, and setup instructions.
+See the [exercise twiki](https://twiki.cern.ch/twiki/bin/view/CMS/SWGuideCMSDataAnalysisSchoolCERN2020TopPairCrossSection) for more information, and setup instructions.
 
 This code can be tested with
 ```bash
