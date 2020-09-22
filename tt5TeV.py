@@ -45,6 +45,18 @@ description_nanov5_5TeV_MC = btd.NanoAODDescription.get("v5", year="2018", isMC=
             btd.ReadJetMETVar("Jet", "MET", jetsExclVars=["raw"], metNomName="nom", metExclVars=["raw", "nom"])
             ])
 
+## no need to propagate the scale uncertainty into the scalefactor, always use nominal
+import bamboo.scalefactors
+binningVariables_nano_noScaleSyst = dict(bamboo.scalefactors.binningVariables_nano)
+binningVariables_nano_noScaleSyst.update({ "Pt" : lambda obj : obj.pt.op.arg.wrapped.result[obj.idx] })
+## for use with bamboo.scalefactors.get_scalefactor
+## e.g. get_scalefactor("lepton", "Muon_RecoToLoose", sfLib=scalefactors_lepMVA, paramDefs=binningVariables_nano_noScaleSyst, systName="muLoose")
+scalefactors_lepMVA = {
+    f"{lFlav}_{ratioSel}" : os.path.join(os.path.dirname(__file__), "data", f"{lFlav}_{ratioSel}SF.json")
+        for ratioSel in ("RecoToLoose", "LooseToTight")
+        for lFlav in ("Electron", "Muon")
+    }
+
 class Nano5TeVBase(NanoAODModule):
     """ Base module for custom 5TeV NanoAODv4 samples """
     def prepareTree(self, tree, sample=None, sampleCfg=None):
