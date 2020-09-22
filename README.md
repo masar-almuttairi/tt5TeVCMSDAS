@@ -9,7 +9,7 @@ bambooRun --maxFiles=1 -m tt5TeV.py:HelloWorld test.yml -o test_out/test_1
 The [``test.yml``](test.yml) file is a shorter version (for checking if the code works)
 of [``tt5TeV.yml``](tt5TeV.yml), which contains a reasonably complete set of samples to get started.
 
-The [``tt5TeV.py``](tt5TeV.py#L71-91) file contains a very simple analysis module
+The [``tt5TeV.py``](tt5TeV.py#L71-L91) file contains a very simple analysis module
 (it makes a single plot, of the dimuon invariant mass distribution), and
 a few hints to get you started with writing a more realistic one.
 
