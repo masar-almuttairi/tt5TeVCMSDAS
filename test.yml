@@ -1,0 +1,62 @@
+## config with only a few samples, for local testing on data and MC (with --maxFiles=1)
+tree: "Events"
+eras:
+  '2017':
+    luminosity: 308.540 #pb
+samples:
+  HighEGJet_2017G:
+    group: data
+    era: "2017"
+    files: filelists/HighEGJet.dat
+    run_range: [306464, 306826]
+    certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
+    split: 25
+  SingleMuon_2017G:
+    group: data
+    era: "2017"
+    files: filelists/SingleMuon.dat
+    run_range: [306464, 306826]
+    certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
+    split: 30
+  DYJetsToLL_MLL50: # alternatively use the jet multiplicity binned sample
+    cross-section: 2055.
+    group: DY
+    era: "2017"
+    files: filelists/DYJetsToLL_MLL_50_TuneCP5_5020GeV_amcatnloFXFX.dat
+    generated-events: genEventSumw
+    split: 7
+  TT:
+    group: TT
+    cross-section: 68.9
+    era: "2017"
+    files: filelists/TT_TuneCP5_PSweights_5p02TeV.dat
+    generated-events: genEventSumw
+    split: 3
+plotIt:
+  configuration:
+    width: 800
+    height: 600
+    luminosity-label: '%1$.2f fb^{-1} (13 TeV)'
+    experiment: CMS
+    extra-label: CMSDAS@CERN2020
+    show-overflow: true
+  legend:
+    position: [0.7, 0.6, 0.91, 0.91]
+  groups:
+    data:
+      legend: data
+    DY:
+      fill-color: "#EDC951" # yellow
+      legend: DY
+      order: 5
+    TT:
+      fill-color: "#CC333F" # red
+      legend: TT
+      order: 3
+  plotdefaults:
+    y-axis: Events
+    log-y: both
+    y-axis-show-zero: True
+    save-extensions: [pdf]
+    show-ratio: True
+    sort-by-yields: False
