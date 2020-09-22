@@ -89,7 +89,7 @@ plotIt:
   configuration:
     width: 800
     height: 600
-    luminosity-label: '%1$.2f fb^{-1} (13 TeV)'
+    luminosity-label: '%1$.2f fb^{-1} (5.02 TeV)'
     experiment: CMS
     extra-label: CMSDAS@CERN2020
     show-overflow: true
