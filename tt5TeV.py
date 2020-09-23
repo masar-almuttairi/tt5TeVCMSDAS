@@ -58,7 +58,7 @@ scalefactors_lepMVA = {
     }
 
 class Nano5TeVBase(NanoAODModule):
-    """ Base module for custom 5TeV NanoAODv4 samples """
+    """ Base module for postprocessed 5TeV NanoAODv5 samples """
     def prepareTree(self, tree, sample=None, sampleCfg=None):
         ## Decorate the tree
         tree,noSel,be,lumiArgs = super(Nano5TeVBase, self).prepareTree(tree, sample=sample, sampleCfg=sampleCfg,

@@ -9,56 +9,50 @@ samples:
     files: filelists/HighEGJet.dat
     run_range: [306464, 306826]
     certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
-    split: 25
+    split: 6
   SingleMuon_2017G:
     group: data
     era: "2017"
     files: filelists/SingleMuon.dat
     run_range: [306464, 306826]
     certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
-    split: 30
+    split: 10
   WJetsToLNu: # alternatively use the jet multiplcity binned sample
     group: "fake"
     cross-section: 21159.
     era: "2017"
     files: filelists/WJetsToLNu_TuneCP5_5020GeV_amcatnloFXFX.dat
     generated-events: genEventSumw
-    split: 3
   DYJetsToLL_M_10to50:
     cross-section: 1506.
     group: DY
     era: "2017"
     files: filelists/DYJetsToLL_MLL_10to50_TuneCP5_5020GeV_amcatnloFXFX.dat
     generated-events: genEventSumw
-    split: 2
   DYJetsToLL_MLL50: # alternatively use the jet multiplicity binned sample
     cross-section: 2055.
     group: DY
     era: "2017"
     files: filelists/DYJetsToLL_MLL_50_TuneCP5_5020GeV_amcatnloFXFX.dat
     generated-events: genEventSumw
-    split: 7
   TT:
     group: TT
     cross-section: 68.9
     era: "2017"
     files: filelists/TT_TuneCP5_PSweights_5p02TeV.dat
     generated-events: genEventSumw
-    split: 3
   tW:
     group: tW
     cross-section: 1.629072
     era: "2017"
     files: filelists/tW_5f_noFullHad_TuneCP5_5p02TeV.dat
     generated-events: genEventSumw
-    split: 2
   tbarW:
     group: tW
     cross-section: 1.629072
     era: "2017"
     files: filelists/tbarW_5f_noFullHad_TuneCP5_5p02TeV.dat
     generated-events: genEventSumw
-    split: 2
   WWTo2L2Nu:
     cross-section: 0.1858
     group: VV
@@ -77,14 +71,12 @@ samples:
     era: "2017"
     files: filelists/ZZTo2L2Nu_5p02TeV.dat
     generated-events: genEventSumw
-    split: 2
   ZZTo4L:
     cross-section: 0.4687
     group: VV
     era: "2017"
     files: filelists/ZZTo4L_5p02TeV.dat
     generated-events: genEventSumw
-    split: 2
 plotIt:
   configuration:
     width: 800

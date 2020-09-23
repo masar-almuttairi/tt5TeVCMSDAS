@@ -10,28 +10,26 @@ samples:
     files: filelists/HighEGJet.dat
     run_range: [306464, 306826]
     certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
-    split: 25
+    split: 6
   SingleMuon_2017G:
     group: data
     era: "2017"
     files: filelists/SingleMuon.dat
     run_range: [306464, 306826]
     certified_lumi_file: https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/5TeV/ReReco/Cert_306546-306826_5TeV_EOY2017ReReco_Collisions17_JSON.txt
-    split: 30
+    split: 10
   DYJetsToLL_MLL50: # alternatively use the jet multiplicity binned sample
     cross-section: 2055.
     group: DY
     era: "2017"
     files: filelists/DYJetsToLL_MLL_50_TuneCP5_5020GeV_amcatnloFXFX.dat
     generated-events: genEventSumw
-    split: 7
   TT:
     group: TT
     cross-section: 68.9
     era: "2017"
     files: filelists/TT_TuneCP5_PSweights_5p02TeV.dat
     generated-events: genEventSumw
-    split: 3
 plotIt:
   configuration:
     width: 800
