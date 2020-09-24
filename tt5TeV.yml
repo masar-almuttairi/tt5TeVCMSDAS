@@ -117,3 +117,5 @@ plotIt:
     save-extensions: [pdf]
     show-ratio: True
     sort-by-yields: False
+  systematics:
+    - muScale
